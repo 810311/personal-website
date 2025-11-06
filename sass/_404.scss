@@ -1,0 +1,42 @@
+
+/*SMACSS - start 404 error page - 404.php
+*This theme has no searchform.php template so below classes are from default search form. 
+*See https://developer.wordpress.org/reference/functions/get_search_form/
+*
+*class names can be changed via wp-includes/general-template.php when determined if it's a module or *layout classes
+*
+*/
+
+.search-form {
+    display: flex;
+    max-width: 24.375rem; /* = 50% of .error-404 max-width: 48.75rem;*/
+    margin: 2rem 0 1.5rem 0;
+}
+
+.search-form label{
+    display: flex;
+    flex: 1; /* = flex: 1 1 0; The items can grow and shrink from a flex-basis of 0.*/
+}
+
+.search-field{
+    flex: 1; /* =flex: 1 1 0; The items can grow and shrink from a flex-basis of 0.*/
+}
+
+.search-submit {
+    padding: 0.5rem 1rem;
+    margin-left: 0.2rem;
+    background-color:  $color-5;
+    cursor: pointer;
+ }
+
+.page-title {
+    margin: 0 0 1.7rem 0;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.widget_categories ul {
+    padding: 0;
+    list-style-type: none;
+}
+

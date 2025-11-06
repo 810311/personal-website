@@ -1,0 +1,123 @@
+
+/*logo and navigation - header.php
+*https://blog.christopherianmurphy.com/2016/01/responsive-pure-css-menu/
+*/
+
+
+.nav-header { /*wrapper*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-logo {
+    padding: 0;  
+    margin: 1.5em 0;
+ }
+
+.menu {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 45rem;
+      list-style-type: none;
+      text-transform: uppercase;
+    } 
+}
+
+
+
+
+.current_page_item > a {
+    border-bottom: .2rem solid $color-4;
+ }
+
+  
+/*hide pseudo-element*/
+.current_page_item a:link::after {
+     display: none;
+}
+
+
+#menu-toggle {
+    display: none;
+} 
+
+.label-toggle {
+    display: none;
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .l-site-header {
+      border: none;
+  }
+
+  .nav-header {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+    
+  .menu {
+      flex:1 0 100%;
+  } 
+
+  .menu { 
+    
+    ul {
+
+      display: block;
+      width: 100%;
+      height:auto;
+      max-height: 0;
+      padding: 0;
+      margin: 0;
+      background-color: $color-6; 
+      transition: max-height .5s ease, opacity .5s ease;
+      opacity: 0;
+      list-style-type: none;
+      text-align: center;
+      visibility: hidden; 
+      overflow: hidden;
+  }
+
+   li {
+      display: block;
+      padding: 1.5em 0;
+      border-bottom: 1px solid $color-7; //#999
+      font-size: 1em;
+      color: $color-1;
+  }
+
+}
+
+ 
+
+  #menu-toggle:checked ~ .menu > ul {
+      height:auto;
+      max-height:40rem;
+      opacity: 1;
+      visibility: visible;
+  } 
+
+  .label-toggle {
+      display: block; 
+      margin-left: auto;
+      float: none;
+      width: 35px;
+      height: 30px;
+      background: linear-gradient(to bottom, #888 0%, #888 20%, transparent 20%, transparent 40%, 
+      #888 40%, #888 60%, transparent 60%, transparent 80%, #888 80%, #888 100%);
+      cursor: pointer;
+  }
+
+
+  .current_page_item > a {
+    border-bottom: .2rem solid $color-4;
+  }
+
+}
+
+/*end topnav*/

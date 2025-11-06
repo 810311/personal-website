@@ -1,0 +1,71 @@
+/*social icons - footer.php */
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    list-style: none; 
+    padding: 0; /*remove default left padding from the "ul" */
+}
+
+
+/*remove navigation label text added via custom menu link */
+
+// .screen-reader-text {
+//     display:none;
+// }
+
+
+.social li  {
+    margin: 0 .23em;
+} 
+
+
+/*override font awesome classes added via CSS class in social(footer) menu in the admin*/
+
+.social li[class*='fa-']:before{ 
+    content:''; 
+}
+
+
+/*add font awesome icons and make them clickable*/
+
+.social li[class*='fa-github'] > a:before{
+    content:'\f09b';
+}
+
+.social li[class*='fa-codepen'] > a:before{
+    content:'\f1cb';
+}
+
+
+.social li[class*='fa-youtube'] > a:before{
+    content:'\f167';
+}
+
+
+.social li a {
+    display: block;
+    width: 1.7em;
+    border-radius: 0.8em; 
+    background: #777;
+    transition: background-color 1s ease-out;
+    text-decoration: none; 
+    text-align: center;
+    line-height: 1.7em;
+    color: #fff;
+} 
+
+.social li a:hover {
+    background: #555;
+}
+
+.l-site-footer > p {
+    padding: 0.2rem; /*replace removed margins with the same value of padding to prevent margin collapse */
+    margin: 0;  /*remove default margin-top and margin-bottom. */
+    text-align: center; 
+    font-size: small; 
+}
+
+
+

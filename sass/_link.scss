@@ -1,0 +1,76 @@
+/*header navigation animated links - header.php
+*https://cssanimation.rocks/animating-links/
+*/
+
+.page_item > a:link,
+.page_item > a:visited {
+    position:relative;
+    text-decoration: none;
+    
+}
+
+.page_item > a:link::after,
+.page_item > a:visited::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    left: 0;
+    bottom: -2.3px;
+    border-bottom: .2rem solid $color-4;
+    transition: right .2s;
+    backface-visibility:hidden;
+}
+
+.page_item > a:hover,
+.page_item > a:active {
+    text-decoration: none;
+}
+
+.page_item > a:hover::after{
+    right:0;
+}
+
+
+/*links on the following pages
+ *blog - index.php 
+ *single post view - single.php 
+ *about - page-about.php
+ *contact - page-contact.php
+ */
+article ul > li > a:link, article ul > li > a:visited,
+p > a:link, p > a:visited,
+.cat-links a:link, .cat-links a:visited,
+.tag-links a:link, .tag-links a:visited  {
+    color: $color-4;
+    text-decoration: underline;
+}
+article ul > li > a:hover, article ul > li > a:active,
+p > a:hover, p > a:active,
+.cat-links a:hover, .cat-links a:active,
+.tag-links a:hover, .tag-links a:active  {
+    text-decoration: none;
+}
+
+/*archive page links - page-archive.php*/
+
+li > div a:link,  
+li > div a:visited  {
+    text-decoration: none;
+    padding-left: 1px;
+    transition: all 0.1s ease-out;
+}
+
+li > div a:hover,  
+li > div a:active  {
+    padding-right: 0.5rem;
+    background-color: $color-5;
+}
+
+
+
+
+
+
+
+
+

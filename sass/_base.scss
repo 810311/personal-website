@@ -1,0 +1,64 @@
+
+/*base styles - default styling for how elements should look in all occurrences on the page.*/
+
+* { 
+    box-sizing: border-box; 
+}
+
+a {
+    color: $color-1;
+}
+
+html {
+    font-size: 62.5%; //=10px 
+    font-family: $font-sans;
+}
+
+body {
+    padding: 0 5px;
+    margin: 0;
+    border: 12px solid $color-2; 
+    color: $color-1;
+    background-color: $color-3;   
+    font-size: 1.6rem; //=16px 
+}
+
+main {
+    line-height: 1.8; 
+}   
+
+
+h1 {
+    margin: 0 0 5rem;
+    font-size: 3rem; //=30px 
+}
+
+h2 {
+    // padding: 0;
+    // margin: 0;
+    font-size: 2.5rem; //=25px 
+}
+
+h3 {
+    font-size: 2rem; //=20px 
+}  
+
+p code {
+    border-bottom: 1px dotted grey;
+}
+
+pre {
+    padding: 1rem;
+    border: 1.5px dashed $color-4;
+    border-radius: 5px;
+    background-color: $color-8;
+}
+
+pre code {
+    display: block;
+    white-space: pre-wrap;
+}
+  
+blockquote {
+    font-style: italic;
+}

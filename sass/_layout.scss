@@ -1,0 +1,38 @@
+/* site layout*/
+
+
+.l-site-header {
+    border-bottom: 1px solid $color-2;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.l-constrained {
+    max-width: 820px; 
+    width: 100%;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+/*blog page - single post view, horizontal margins don't collapse with parent padding (body {padding: 0 5px;}) so removing margin: 0 auto;
+*from .l-constrained as it causes overflow of HTML, CSS and PHP code embedded in pre tag on screens 320px and smaller*/
+@media screen and (max-width: 650px) {
+  .l-constrained {
+      margin: 0;
+    }
+}
+.l-constrained article {
+    margin-bottom: 3rem;
+}
+
+.l-site-footer { 
+    margin-top: auto; 
+}
+
+
+

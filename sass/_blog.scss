@@ -1,0 +1,26 @@
+/*blog page - index.php*/
+.read-more {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/*post navigation
+*blog page - index.php 
+*single project view - single-portfolio.php
+*/
+
+.nav-links { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links,
+.cat-links,
+.tag-links,
+.dt  {
+    font-size: 1.4rem;
+}
+
+
+
